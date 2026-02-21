@@ -1,32 +1,44 @@
-# Welcome to Your Clipboard Assessment
+# Red Planet Staffing Analytics
 
-You’ve been invited to this Repo to complete a technical assessment. Please follow the instructions carefully, as the repository contains multiple assessments and only one applies to you.
+A backend analytics system built with NestJS and Prisma to rank workplaces and workers based on completed shifts.
 
-## Step 1: Identify the Assessment Assigned to You
+## Features
 
-The assessment you should complete is explicitly mentioned in the email you received. Use that email as your single source of truth.
+- Filters completed shifts (endAt < current time)
+- Aggregates shift counts per workplace
+- Aggregates shift counts per worker
+- Returns Top 3 ranked entities
+- Clean CLI output with JSON formatting
+- Logger suppression for script compatibility
 
-## Step 2: Read the Correct README
+## Tech Stack
 
-This repository contains READMEs for three different assessments, please read only the one that matches your assessment title:
-### First Round
-- **[Red Planet Top Workplaces](README-Red-Planet.md)**
-  - If you have just applied, this is the assessment you are expected to complete.
-  - The other tasks in this repository are second-round assessments and do not apply to you. Please ignore those folders entirely.
-### Second Round
-- **[Small Ticket (Backend)](README-Backend-Small-Task.md) (Second Round only)**
-  - Complete this only if your email explicitly instructs you to do so.
+- Node.js
+- NestJS
+- Prisma ORM
+- SQLite
 
-- **[Small Ticket (Frontend)](README-Frontend-Small-Task.md) (Second Round only)**
-  - Complete this only if your email explicitly instructs you to do so.
+## Key Concepts Demonstrated
 
-Please note, all assessments live in the same repository, but you are expected to complete only one. If anything is unclear, please reach out before starting.
-## License
+- Database querying with Prisma
+- Data aggregation and ranking
+- Sorting and slicing
+- CLI script architecture
+- Debugging JSON output issues
+- Prisma migrations & seeding
 
-At CodeScreen, we strongly value the integrity and privacy of our assessments. As a result, this repository is under exclusive copyright, which means you **do not** have permission to share your solution to this test publicly (i.e., inside a public GitHub/GitLab repo, on Reddit, etc.). <br>
+## How It Works
 
-## Submitting your solution
+1. Fetch completed shifts.
+2. Count shifts per entity.
+3. Map results with names.
+4. Sort descending.
+5. Return top 3.
 
-Please follow the instructions in the `README` file for your assessment.<br>
+## Learning Outcomes
 
-Once you are finished with the task, please click the `Submit Solution` link on <a href="https://app.codescreen.com/candidate/c5167a9b-83f8-4b32-a96b-61c43688225c" target="_blank">this screen</a>.
+This project strengthened my understanding of:
+- Backend data processing
+- ORM-based querying
+- Handling clean script output
+- Debugging ANSI escape issues
